@@ -1,0 +1,47 @@
+.container-event {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.card {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    transition: 0.3s;
+    margin: 80px auto;
+    border-radius: 20px;
+}
+
+.glass {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.2);
+}
+/*Contenido del card*/
+.card-event-info {
+    text-align: justify;
+    padding: 20px;
+}
+.img-event {
+    position: absolute;
+    top: 10px;
+    border-radius: 20px;
+    left: 9px;
+    width: 92%;
+    height: 95%;
+    display: none;
+}
+.buttons {
+    position: absolute;
+    bottom: 30px;
+    right:10px; /* Mover los botones hacia la derecha */
+    display: flex; /* Organizar los botones horizontalmente */
+    gap: 10px; /* Espacio entre los botones */
+}

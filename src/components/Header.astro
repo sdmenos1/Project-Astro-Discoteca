@@ -1,0 +1,150 @@
+
+<header>
+    <div class="head">
+        <div class="logo">
+            <img src="pictures/kali.png" alt="Logo" width="50%" height="50%">
+        </div>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a class="btn-navbar">Inicio</a></li>
+                <li><a class="btn-navbar">Carta</a></li>
+                <li><a class="btn-navbar">Eventos</a></li>
+                <li><a class="btn-navbar">Galeria</a></li>
+                <li><a class="btn-navbar">Nosotros</a></li>
+            </ul>
+        </nav>
+        <div class="reserve-btn">
+            <div class="container-btn">
+                <div class="reserve">
+                    <div class="star">
+                    </div>
+                    <span class="reserva">Reserva</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<style>
+    *,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    font-size:16px ;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.head{
+    background-color: transparent;
+    height: 100px;
+    display:grid;
+    grid-template-columns: 120px 1fr 200px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.nav-list{
+    position: absolute;
+    right:50px ;
+    display: flex;
+}
+
+.nav-list li{
+    list-style: none;
+    cursor: pointer;
+    
+}
+
+.nav-list li .btn-navbar{
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    color: #f0f0f0;
+    position: relative;
+    z-index: 0;
+    border-radius:10px ;
+    background-color: transparent;
+}
+
+.navbar .nav-list li .btn-navbar::after{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+.navbar .nav-list li .btn-navbar::before{
+    content: '';
+    background: linear-gradient(25deg, #FF0000, #FF7300, #FFFB00, #48FF00, #00FFD5, #002BFF, #FF00CB, #FF0000);
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    width: 102%;
+    height: 10%;
+    background-size: 400%;
+    border-radius:10px ;
+    z-index: -1;
+    filter: blur(px);
+    animation: glowing 30s infinite;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+.navbar .nav-list li .btn-navbar:hover::before{
+    opacity: 1;
+}
+@keyframes glowing {
+    0% {
+        background-position: 0%;
+    }
+    50% {
+        background-position: 400%;
+    }
+    100% {
+        background-position: 0%;
+    }
+}
+/*Boton de reserva*/
+.reserve-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0px;
+}
+.star{
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    background-color: rgb(255, 255, 255);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+.reserve{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.reserva{
+    color: white;
+}
+.container-btn{
+    border-radius: 10px;
+    padding: 10px 40px;
+    background-color: rgb(44,44,44);
+}
+</style>
