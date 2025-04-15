@@ -4,20 +4,8 @@
         "title":"Electro Reggaeton",
         "description":"A fusion of electronic beats and reggaeton rhythms, perfect for dancing.",
         "image":"../pictures/events/image1.jpeg",
-        "fecha":"Viernes 11"
-    },
-    {
-        "id":2,
-        "title":"ALEXI Y LA DOBLE A LINA URIEL",
-        "description":"A fusion of electronic beats and reggaeton rhythms, perfect for dancing.",
-        "image":"../pictures/events/image2.jpeg",
-        "fecha":"Viernes 11"
-    },
-    {
-        "id":3,
-        "title":"TORNEO DJS",
-        "description":"A fusion of electronic beats and reggaeton rhythms, perfect for dancing.",
-        "image":"../pictures/events/image3.jpeg",
-        "fecha":"Viernes 11"
+        "fecha":"Viernes 11",
+        "background":"../pictures/backgrounds/fondo2.png"
     }
+
 ]

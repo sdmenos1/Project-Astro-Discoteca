@@ -10,35 +10,20 @@ import { EffectCoverflow, Pagination } from "swiper/modules";
 export default function CardEvent() {
     return (
         <main className="main-container">
-            <Swiper
-                effect={'coverflow'}
-                grabCursor={true}
-                centeredSlides={true}
-                slidesPerView={3}
-                coverflowEffect={{
-                    rotate: 50,
-                    stretch: 0,
-                    depth: 100,
-                    modifier: 1,
-                    slideShadows: true,
-                }}
-                pagination={true}
-                modules={[EffectCoverflow, Pagination]}
-                className="mySwiper"
-            >
+
                 {
                     cards.map((card) => (
-                        <SwiperSlide key={card.id}>
+
                             <EventContent
+                                key={card.id}
                                 img={card.image}
                                 fecha={card.fecha}
                                 title={card.title}
                                 informacion={card.description}
+                                background={card.background}
                             />
-                        </SwiperSlide>
                     ))
                 }
-            </Swiper>
         </main>
     );
 }
