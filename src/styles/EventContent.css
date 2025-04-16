@@ -1,8 +1,32 @@
 .container-event{
     position: relative;
+    display: flex;
+    flex: 1;
+    z-index: 0;
+    height: 100vh;
+    background: url("/pictures/fondos/fondo.jpeg") no-repeat center/cover;
     width: 70%;
-    height: 100%;
+    height:100%;
 }
+/*
+.main-container {
+    display: flex;
+    flex: 1;
+    z-index: 0;
+    height: 100vh;
+    background: url("/pictures/events/pexels-edotommo99-2034851.jpg") no-repeat center/cover;
+}
+.main-container:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7),transparent);
+    z-index: 1;
+}
+*/
 .card-glass{
     position: absolute;
     width: 100%;

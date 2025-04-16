@@ -1,0 +1,15 @@
+---
+import imgs from '../data/imgs.json'
+const {img}=Astro.props
+---
+<main class="main-container">
+    <div class="container">
+        <div class="grid-container">
+            {
+                imgs.map((img)=>{
+                    <img src={img.source} ></img>
+                })
+            }
+        </div>
+    </div>
+</main>
