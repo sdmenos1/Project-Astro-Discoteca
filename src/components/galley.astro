@@ -7,7 +7,7 @@ const {img}=Astro.props
         <div class="grid-container">
             {
                 imgs.map((img)=>{
-                    <img src={img.source} ></img>
+                    <img src={img.source} alt={img.alt}></img>
                 })
             }
         </div>
