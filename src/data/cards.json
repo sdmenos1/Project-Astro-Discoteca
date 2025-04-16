@@ -5,7 +5,26 @@
         "description":"A fusion of electronic beats and reggaeton rhythms, perfect for dancing.",
         "image":"../pictures/events/image1.jpeg",
         "fecha":"Viernes 11",
-        "background":"../pictures/backgrounds/fondo2.png"
+        "background":"../pictures/backgrounds/fondo2.png",
+        "buttonColor":"linear-gradient(90deg,hsl(348, 100%, 20%) 0%,hsl(348, 100%, 50%) 50%, hsl(348, 100%, 20%) 100%); "
+    },
+    {
+        "id":2,
+        "title":"Jazz Night",
+        "description":"An evening of smooth jazz and live performances.",
+        "image":"../pictures/events/image3.jpeg",
+        "fecha":"Sábado 12",
+        "background":"../pictures/backgrounds/Pincipal.png",
+        "buttonColor":"linear-gradient(90deg,hsl(120, 100%, 20%) 0%,hsl(120, 100%, 40%) 50%,hsl(120, 100%, 20%) 100%);"
+    },
+    {
+        "id":3,
+        "title":"Rock Legends",
+        "description":"A tribute to the greatest rock bands of all time.",
+        "image":"../pictures/events/image2.jpeg",
+        "fecha":"Domingo 13",
+        "background":"../pictures/backgrounds/fondo3.png",
+        "buttonColor":"linear-gradient(90deg,hsl(30, 100%, 20%) 0%,hsl(30, 100%, 50%) 50%, hsl(30, 100%, 20%) 100%);"
     }
 
 ]

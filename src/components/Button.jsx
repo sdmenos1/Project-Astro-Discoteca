@@ -9,7 +9,7 @@ export default function ButtonReserva({color}){
     return(
         <div className="container">
             <a href="" className="button">
-                <div className="button__content">
+                <div className="button__content" style={{"--gradient-color":`${color}`}}>
                     <span className="button__text">{TextButton? 'Reservar':'Reservado'}</span>
                     {
                         reserve? <FontAwesomeIcon icon={faCircleCheck}></FontAwesomeIcon> :<FontAwesomeIcon icon={faHourglassHalf}></FontAwesomeIcon>
