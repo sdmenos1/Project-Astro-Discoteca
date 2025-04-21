@@ -1,0 +1,54 @@
+---
+const {imgDiscoteca, imgEventosPasado, imgNuestroAmbiente} = Astro.props
+type imgDatail={
+        style:string,
+        id:number,
+        src:string,
+        alt:string
+};
+---
+<main class="flex-1 w-full flex flex-col items-center dark:bg-gray-900 py-45">
+    <section class="">
+        <div class="">
+                <h2 class="text-2xl border-b-2 px-6 py-2 flex justify-center mx-[40%]">Eventos pasado</h2>
+                <article class="columns-3 my-5">
+                        <div class="mx-10">
+                        {
+                              (imgEventosPasado as imgDatail[]).map((img)=>(
+                                <div class={img.style}>
+                                </div>
+                              ))  
+        
+                        }
+                        </div>
+                </article>
+        </div>
+        <div>
+                <h2 class="text-2xl border-b-2 px-20 flex justify-center mx-[40%]">Discoteca</h2>
+                <article class="columns-3 my-5">
+                        <div class="mx-10">
+                        {
+                                (imgDiscoteca as imgDatail[]).map((img)=>(
+                                <div class={img.style}>
+                                </div>
+                                ))  
+          
+                          }
+                        </div>
+                </article>
+        </div>
+        <div>
+                <h2 class="text-2xl border-b-2 px-6 flex justify-center mx-[40%]">Ambiente</h2>
+                <article class="columns-3 my-5">
+                        <div class="mx-10">
+                        {
+                                (imgNuestroAmbiente as imgDatail[]).map((img,index)=>(
+                                <img src={img.src} alt={img.alt} class={`w-[200px] h-[200px]`}></img>
+                                ))  
+          
+                          }
+                        </div>
+                </article>
+        </div>
+    </section>
+</main>

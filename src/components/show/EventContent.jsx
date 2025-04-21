@@ -1,6 +1,6 @@
 import React from 'react'
-import '../styles/EventContent.css'
-import ButtonReserva from './Button'
+import '../../styles/EventContent.css'
+import ButtonReserva from '../Button'
 export default function EventContent({img,fecha,title,informacion,background,eventContent}) {
     return( 
         <>

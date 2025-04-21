@@ -1,0 +1,11 @@
+[
+
+    {
+        "src":"Pictures/gallery/ambiente/img1.jpg",
+        "alt":"imagen tomada hoy"
+    },
+    {
+        "src":"Pictures/gallery/ambiente/img2.jpg",
+        "alt":"Imagen tomada ayer"
+    }
+]

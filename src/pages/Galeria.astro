@@ -1,4 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Gallery from "../components/show/gallery.astro";
+import imgDiscotecas from '../data/imgsDiscoteca.json'
+import imgEventos from '../data/imgsEvents.json'
+import imgNosotros from '../data/imgNosotros.json'
 ---
-<Layout></Layout>
+<Layout>
+    <Gallery imgDiscoteca={imgDiscotecas} imgEventosPasado={imgEventos} imgNuestroAmbiente={imgNosotros}/>
+</Layout>
