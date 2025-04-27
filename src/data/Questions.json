@@ -1,0 +1,34 @@
+[
+    {
+        "question":"¿Cuál es el horario de apertura y cierre de la discoteca?",
+        "answer":"Abrimos de jueves a sábado desde las 10:00 p.m. hasta las 5:00 a.m. Los horarios pueden variar en eventos especiales."
+    },
+    {
+        "question":"¿Es necesario hacer reservación para ingresar?",
+        "answer":"No es obligatorio, pero se recomienda especialmente para mesas VIP o eventos con alta demanda."
+    },
+    {
+        "question":"¿Cuál es el código de vestimenta?",
+        "answer":"El acceso está permitido con vestimenta casual elegante. No se permite el ingreso con ropa deportiva ni sandalias."
+    },
+    {
+        "question":"¿Qué tipo de música se toca?",
+        "answer":"Ofrecemos una mezcla de reggaetón, electrónica, house, música urbana y éxitos del momento. También tenemos DJs invitados y noches temáticas."
+    },
+    {
+        "question":"¿Cuál es la edad mínima para ingresar?",
+        "answer":"La edad mínima es de 18 años. Se requiere presentar un documento de identidad válido al ingresar."
+    },
+    {
+        "question":"¿Se puede ingresar con alimentos o bebidas del exterior?",
+        "answer":"No, por normas de seguridad e higiene no está permitido ingresar con alimentos ni bebidas externas."
+    },
+    {
+        "question":"¿Hay estacionamiento disponible?",
+        "answer":"Sí, contamos con estacionamiento vigilado para nuestros clientes, sujeto a disponibilidad."
+    },
+    {
+        "question":"¿Se pueden celebrar cumpleaños o eventos privados?",
+        "answer":"¡Claro! Puedes celebrar tu cumpleaños o alquilar espacios para eventos privados. Contáctanos para más detalles y paquetes especiales."
+    }
+]

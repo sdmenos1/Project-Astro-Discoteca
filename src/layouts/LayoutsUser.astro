@@ -1,0 +1,127 @@
+---
+import '../styles/global.css'
+const {userName}=Astro.props
+---
+
+<html lang="es">
+    <head>
+        <title>Perfil del usuario {userName}</title>
+
+    </head>
+    <body class="bg-white relative h-screen overflow-hidden">
+        <header class="w-full bg-white/95 px-20">
+            <div class="">
+                <nav class="flex justify-between items-center py-4">
+                    <div>
+                        <a href="/" class="btn-inicio">Inicio</a>
+                    </div>
+                    <div class="cursor-none">
+                        <img src="/pictures/kali.png" height="100px" width="100px">
+                    </div>
+                    <div class="p-3 bg-red-700 rounded-4xl cursor-pointer">
+                        <button class="text-red-50">Cerrar sesion</button>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Botón de modo oscuro -->
+        <div class="absolute bottom-0 right-0 m-3 z-10">
+            <button
+                class="p-3 bg-white/95 rounded-4xl shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1 cursor-pointer mode-button"
+            >
+                <img id="modeIcon" src="/public/moon-icon.svg" alt="Modo oscuro" width="40px">
+            </button>
+        </div>
+
+        <slot></slot>
+
+        <script>
+            const buttonMode=document.querySelector('.mode-button')
+            function changeMode() {
+                const body = document.body;
+                const icon = document.getElementById('modeIcon') as HTMLImageElement;
+
+                body.classList.toggle('dark');
+
+                if (body.classList.contains('dark')) {
+                    icon.src = '/public/sun-icon.svg'; 
+                } else {
+                    icon.src = '/public/moon-icon.svg'; 
+                }
+
+                localStorage.setItem('darkMode',String(body.classList.contains('dark')));
+            }
+
+            window.addEventListener('DOMContentLoaded', () => {
+                const savedMode = localStorage.getItem('darkMode');
+                const body = document.body;
+                const icon = document.getElementById('modeIcon') as HTMLImageElement ;
+
+                if (savedMode === 'true') {
+                    body.classList.add('dark');
+                    icon.src = '/public/sun-icon.svg';
+                } else {
+                    body.classList.remove('dark');
+                    icon.src = '/public/moon-icon.svg';
+                }
+            });
+            buttonMode?.addEventListener('click',()=>{
+                changeMode()
+            })
+        </script>
+    </body>
+</html>
+<style> 
+    .btn-inicio{
+        padding: 10px 20px;
+        border: none;
+        position: relative;
+        z-index: 0;
+        border-radius: 10px;
+        text-decoration: none;
+        background-color: transparent;
+        font-weight: bold;
+    }
+    .btn-inicio::after{
+        content: "";
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+    }
+    .btn-inicio::before{
+        content: '';
+        background: linear-gradient(25deg, #FF0000, #FF7300, #FFFB00, #48FF00, #00FFD5, #002BFF, #FF00CB, #FF0000);
+        position: absolute;
+        bottom: 0;
+        left: 0px;
+        width: 102%;
+        height: 10%;
+        background-size: 400%;
+        border-radius:10px ;
+        z-index: -1;
+        filter: blur(1px);
+        animation: glowing 30s infinite;
+        transition: opacity 0.3s ease-in-out;
+        opacity: 0;
+    }
+    .btn-inicio:hover::before{
+        opacity: 1;
+    }
+    @keyframes glowing {
+    0% {
+        background-position: 0%;
+    }
+    50% {
+        background-position: 400%;
+    }
+    100% {
+        background-position: 0%;
+    }
+}
+</style>

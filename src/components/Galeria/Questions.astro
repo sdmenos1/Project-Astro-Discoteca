@@ -1,0 +1,17 @@
+---
+const {question,answer}=Astro.props
+---
+    <div class="w-full max-w-xl relative px-4 nica">
+        <div class="border-b border-gray-400 py-4 flex items-center justify-between cursor-pointer" id="toggle">
+          <p class="text-lg font-semibold text-amber-50">
+            {question}dadsadadwqeqewqewq
+          </p>
+          <img src="/public/40169.svg" class="w-4 h-4 transition-transform duration-300" id="arrow" />
+        </div>
+    
+        <div class="overflow-hidden transition-all duration-500 opacity-0 max-h-0" id="respuesta">
+          <p class="text-gray-600 mt-2">
+            {answer}
+          </p>
+        </div>
+    </div>

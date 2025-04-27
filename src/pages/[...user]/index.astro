@@ -1,0 +1,21 @@
+---
+import Interface from '../../components/Interface.astro'
+import LayoutUser from '../../layouts/LayoutsUser.astro'
+const UserProps={
+    avatar:'https://unavatar.io/github/37t?fallback=https://source.boringavatars.com/marble/120/1337_user?colors=264653r,2a9d8f,e9c46a,f4a261,e76f51',
+    name:'Adrian',
+    email:'adr14nm4_30_12@hotmail.com',
+    age:12,
+    gender:'masculino',
+    fechaNacimiento:'13/05/2005',
+    Events:{
+        image:"/pictures/events/image1.jpeg",
+        title:"Electro Reggaeton",
+        fecha:"14/03/23",
+        description:"A fusion of electronic beats and reggaeton rhythms, perfect for dancing"
+    }
+}
+---
+<LayoutUser userName="nica">
+    <Interface {...UserProps}></Interface>
+</LayoutUser>

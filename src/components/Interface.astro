@@ -1,0 +1,132 @@
+---
+interface EventsProps{
+    image:string;
+    title:string;
+    fecha:string;
+    description:string
+};
+interface UserProps{
+    avatar?:string;
+    name:string;
+    Events?:EventsProps;
+    email:string;
+    age:number;
+    gender:string;
+    fechaNacimiento:string
+}
+const { avatar, name, Events, email, age, gender, fechaNacimiento }: Record<string, any>= Astro.props;
+---
+<main class="flex flex-row w-full justify-center items-center absolute">
+    <div class="w-5/6 flex justify-center items-center bg-[#EEEEEEFF] m-10 p-3">
+        <div class="w-full flex flex-col justify-center items-center gap-5">
+            <picture>
+                <img src={avatar} width="100px" class="rounded-4xl shadow-xl/30">
+            </picture>
+            <div class="w-full h-70">
+                <div class="w-full h-full grid grid-cols-5 grid-rows-5 bg-white/95">
+                    <div class="col-start-1 col-end-2 row-start-1 row-end-2 flex justify-center items-center">
+                        <span class="text-[16px] cursor-pointer text-decoration info font-bold">Informacion personal</span>
+                    </div>
+                    <div class="col-start-1 col-end-2 row-start-2 row-end-3 flex justify-center items-center">
+                        <span class="text-[16px] cursor-pointer text-decoration events font-bold">Eventos</span>
+                    </div>
+                    <!--grid de informacion personal -->
+                    <div class="col-start-2 col-end-6 row-start-1 row-end-6 ml-1 border-l-2 p-5 mr-5  grid-info">
+                        <div class="mb-3">
+                            <span class="text-slate-400">Nombre: {name}</span>
+                        </div>
+                        <div class="mb-3">
+                            <span class="text-slate-400">Email: {email}</span>
+                        </div>
+                        <div class="mb-3">
+                            <span class="text-slate-400">Edad: {age}</span>
+                        </div>
+                        <div class="mb-3">
+                            <span class="text-slate-400">Fecha de Nacimiento: {fechaNacimiento}</span>
+                        </div>
+                        <div class="mb-3">
+                            <span class="text-slate-400">Genero: {gender}</span>
+                        </div>
+                    </div>
+                    <!--grid de eventos -->
+                    <div class="col-start-2 col-end-6 row-start-1 row-end-6 ml-1 border-l-2 p-5 mr-5 grid-events hidden">
+                        <div class="flex flex-col gap-2">
+                            <div class="flex justify-between items-center">
+                                <picture>
+                                    <img src={Events?.image} alt="" class="w-15">
+                                </picture>
+                                <div>
+                                    <span class="font-bold">{Events?.title}</span>
+                                </div>
+                                <div>
+                                    <span class="font-bold">
+                                        {Events?.fecha}
+                                    </span>
+                                </div>
+                                <div >
+                                    <span class="font-bold">...</span>
+                                    <div class="hidden ">
+                                        {Events?.description}
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <picture>
+                                    <img src={Events?.image} alt="" class="w-15">
+                                </picture>
+                                <div>
+                                    <span class="font-bold">{Events?.title}</span>
+                                </div>
+                                <div>
+                                    <span class="font-bold">
+                                        {Events?.fecha}
+                                    </span>
+                                </div>
+                                <div >
+                                    <span class="font-bold">...</span>
+                                    <div class="hidden ">
+                                        {Events?.description}
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const gridEvents=document.querySelector('.grid-events')
+        const gridInfo=document.querySelector('.grid-info')
+        const Infor=document.querySelector('.info')
+        const events=document.querySelector('.events')
+        function eventsReveal(){
+            gridInfo?.classList.toggle('hidden')
+            gridEvents?.classList.toggle('hidden')
+        }
+        Infor?.addEventListener('click',()=>{
+            eventsReveal()
+        })
+        events?.addEventListener('click',()=>{
+            eventsReveal()
+        })
+    </script>
+</main>
+<style>
+    .text-decoration{
+        text-transform: uppercase;
+        background: linear-gradient(to left, #fc72ff,#8f68ff,#487bff,#8f68ff,#fc72ff);
+        background-size: 200%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color:transparent;
+        animation: animation-gradiant infinite ease-in-out 5s ;
+    }
+    @keyframes animation-gradiant {
+        to{
+            background-position: 200%;
+        }
+    }
+</style>

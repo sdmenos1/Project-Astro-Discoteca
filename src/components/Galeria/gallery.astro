@@ -1,4 +1,6 @@
 ---
+import Desplegable from '../Galeria/Questions.astro'
+import questions from '../../data/Questions.json'
 const {imgDiscoteca, imgEventosPasado, imgNuestroAmbiente} = Astro.props
 type imgDatail={
         style:string,
@@ -6,11 +8,16 @@ type imgDatail={
         src:string,
         alt:string
 };
+type desplegable={
+        question:string,
+        answer:string
+};
+
 ---
 <main class="flex-1 w-full flex flex-col items-center dark:bg-gray-900 py-45">
     <section class="">
         <div class="">
-                <h2 class="text-2xl border-b-2 px-6 py-2 flex justify-center mx-[40%]">Eventos pasado</h2>
+                <h2 class="text-2xl border-b-2 px-6 py-2 flex justify-center mx-[36%]">Eventos pasado</h2>
                 <article class="columns-3 my-5">
                         <div class="mx-10">
                         {
@@ -51,4 +58,14 @@ type imgDatail={
                 </article>
         </div>
     </section>
+    <div class="">
+        <div class="flex justify-center text-3xl text-amber-100 border-b-2 mb-5">
+                <p class="mb-2">Preguntas frecuentes</p>
+        </div>
+            {
+                (questions as desplegable[]).map((question)=>(
+                    <Desplegable question={question.question} answer={question.answer}/>
+                ))
+            }
+    </div>
 </main>
